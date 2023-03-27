@@ -32,7 +32,7 @@ const printTable = (rows, columns, spacing = 4) => {
 				{},
 			),
 		),
-		["username", "followers_count"],
+		["username_search", "similar_username", "followers_count", "permalink_url"],
 	);
 };
 
@@ -51,11 +51,13 @@ const printTable = (rows, columns, spacing = 4) => {
 				data.collection.length > 0 && data.collection[0].followers_count < 100;
 
 			return {
-				username,
+				username_search: username,
+				similar_username: data.collection[0].username,
 				available: false,
 				existing: true,
 				unpopular,
 				followers_count: data.collection[0].followers_count,
+				permalink_url: data.collection[0].permalink_url,
 			};
 		}),
 	);
@@ -74,7 +76,12 @@ const printTable = (rows, columns, spacing = 4) => {
 	console.log(
 		`\nListe des noms d'utilisateur déjà utilisés mais peu populaires (${existingUnpopularUsernames.length}):`,
 	);
-	printTable(existingUnpopularUsernames, ["username", "followers_count"]);
+	printTable(existingUnpopularUsernames, [
+		"username_search",
+		"similar_username",
+		"followers_count",
+		"permalink_url",
+	]);
 
 	console.log(" ".repeat(4));
 
@@ -85,5 +92,10 @@ const printTable = (rows, columns, spacing = 4) => {
 	console.log(
 		`Liste des noms d'utilisateur déjà utilisés et populaires (${existingPopularUsernames.length}):`,
 	);
-	printTable(existingPopularUsernames, ["username", "followers_count"]);
+	printTable(existingPopularUsernames, [
+		"username_search",
+		"similar_username",
+		"followers_count",
+		"permalink_url",
+	]);
 })();
