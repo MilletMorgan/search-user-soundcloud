@@ -7,5 +7,5 @@ Petit script qui permet de chercher les nom d'utilisateurs disponible ou déjà 
 Rajouter plusieurs nom d'utilisateurs dans listUsers.txt en les séparants par un saut de ligne.
 
 ```shell
-sh script.sh
+zx script.mjs
 ```

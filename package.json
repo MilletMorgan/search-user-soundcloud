@@ -1,0 +1,19 @@
+{
+  "name": "soundcloud",
+  "version": "1.0.0",
+  "description": "Petit script qui permet de chercher les nom d'utilisateurs disponible ou déjà utiliser sur SoundCloud.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MilletMorgan <morgan.millet@bedrockstreaming.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "node-fetch": "^3.3.1",
+    "p-queue": "^7.2.0",
+    "progress": "^2.0.3",
+    "zx": "^7.2.1"
+  },
+  "repository": "git@github.com:MilletMorgan/search-user-soundcloud.git"
+}
