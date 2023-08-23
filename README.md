@@ -1,10 +1,17 @@
 # Search username on SoundCloud
 
-Petit script qui permet de chercher les nom d'utilisateurs disponible ou déjà utiliser sur SoundCloud.
+Small script to search for usernames available or already in use on SoundCloud.
 
-## Utilisation
+## Install
+```shell
+npm i -g zx
+```
 
-Rajouter plusieurs nom d'utilisateurs dans listUsers.txt en les séparants par un saut de ligne.
+Requirement: Node version >= 16.0.0
+
+## Usage
+
+Add several usernames to listUsers.txt, separating them with a line break.
 
 ```shell
 zx script.mjs
